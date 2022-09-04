@@ -1,16 +1,27 @@
+@font-face {
+    font-family: ChakraPetch;
+    src: url(../Fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+}
+@font-face {
+    font-family: Comfortaa;
+    src: url(../Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
 :root{
     --navheight: 60px;
     --bg-nav: #202124;
     --color-nav: #d2d3d7;
     --bg-favorites: #F7F6DC;
     font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'ChakraPetch';
     --z-nav: 4000;
     --z-burguer: 4500;
     --z-favorite: 3000;
     --z-perfil: 3500;
     --z-promo: 500;
 }
+
+
 *{
     margin: 0;
     padding: 0;
@@ -97,6 +108,9 @@ li{
     height: 20px;
     width: 20px;
 }
+.burgerNavbar > img{
+    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
+}
 
 
 .activate{
@@ -108,8 +122,7 @@ li{
     position: absolute;
     top: -1px;
     left: 0;
-    /* height: calc(100vh - var(--navheight)); */
-    height: 100vh;
+    height: calc(100vh - var(--navheight));
     width: 100vw;
     margin-top: var(--navheight);
     padding: 2em 0.5em;
@@ -127,7 +140,13 @@ li{
     align-self: flex-start;
     padding-left: 1em;
 }
-
+.menuFavorite .contentGrid{
+    overflow: scroll;
+}
+.favorites .em{
+    height: 35px;
+    width: 35px;
+}
 
 .menuPerfil{
     position: absolute;
@@ -162,6 +181,10 @@ li{
 .menuPerfil .carrito h3::before{
     contain: url();
 }
+.perfil > img{
+    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
+}
+
 
 
 .forYou{
@@ -172,7 +195,7 @@ li{
     /* border-radius: 2em; */
     /* overflow: hidden; */
     /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; */
-    background: linear-gradient(gainsboro, white 50px)
+    background: linear-gradient(gainsboro, white 50px);
 }
 .forYou .menuForYou{
     display: flex;
