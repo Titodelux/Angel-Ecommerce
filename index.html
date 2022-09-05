@@ -48,62 +48,77 @@
                     <li>Sing in</li>
                     <li>Log in</li> 
                 </ul>
-                <div class="carrito fuente1">
-                    <h3>Carrito</h3>
-                    <p>Productos <span>0</span></p>
-                    <p>Precio <span>0$</span></p>
+                <div class="carrito fuente1" id="openCart">
+                    <img src="./images/shopping-cart.png" alt="Comprar">
+                    <p>Productos: <span>111111110</span></p>
+                    <p>Precio: <span>111111110$</span></p>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="promo">
-        <h2 class="textPromo fuente2">Promociones Destacadas</h2>
-        <div class="productPromo"><img src="images/products/charlesdeluvio-1-nx1QR5dTE-unsplash.jpg" alt=""></div>
-        <div class="productPromo"><img src="images/products/daniel-korpai-hbTKIbuMmBI-unsplash.jpg" alt=""></div>
-        <div class="productPromo"><img src="images/products/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""></div>
-        <div class="productPromo"><img src="images/products/giorgio-trovato-K62u25Jk6vo-unsplash.jpg" alt=""></div>
-        <div class="btn-slide"><img src="images/atras.png" alt="anterior" class="anterior"><img src="images/proximo.png"
-                alt="siguiente" class="siguiente"></div>
-    </div>
-    <div class="forYou">
-        <ul class="menuForYou fuente2">
-            <li class="btn-Foryou activate">
-                <h2>Descubre</h2>
-            </li>
-            <li class="btn-Foryou">
-                <h2>Categorías</h2>
-            </li>
-        </ul>
-        <div class="gridDiscover " id="Discover">
+    <div class="main">
+        <div class="promo">
+            <h2 class="textPromo fuente2">Promociones Destacadas</h2>
+            <div class="productPromo"><img src="images/products/charlesdeluvio-1-nx1QR5dTE-unsplash.jpg" alt=""></div>
+            <div class="productPromo"><img src="images/products/daniel-korpai-hbTKIbuMmBI-unsplash.jpg" alt=""></div>
+            <div class="productPromo"><img src="images/products/eniko-kis-KsLPTsYaqIQ-unsplash.jpg" alt=""></div>
+            <div class="productPromo"><img src="images/products/giorgio-trovato-K62u25Jk6vo-unsplash.jpg" alt=""></div>
+            <div class="btn-slide"><img src="images/atras.png" alt="anterior" class="anterior"><img src="images/proximo.png"
+                    alt="siguiente" class="siguiente"></div>
         </div>
-        <div class="gridCategory fuente1" id="Category">
-            <div class="articleGrid">
-                <div class="articleBox">Celulares<img src="images/down-arrow.png" alt="Expandir"></div><div class="gridDiscover"></div>
+        <div class="forYou">
+            <ul class="menuForYou fuente2">
+                <li class="btn-Foryou activate">
+                    <h2>Descubre</h2>
+                </li>
+                <li class="btn-Foryou">
+                    <h2>Categorías</h2>
+                </li>
+            </ul>
+            <div class="gridDiscover " id="Discover">
             </div>
-            <div class="articleGrid">
-                <div class="articleBox">Tecnología<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
+            <div class="gridCategory fuente1" id="Category">
+                <div class="articleGrid">
+                    <div class="articleBox">Celulares<img src="images/down-arrow.png" alt="Expandir"></div><div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Tecnología<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Electrodomésticos<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Moda<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Entrenamiento<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Jardín<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
+                <div class="articleGrid">
+                    <div class="articleBox">Industria<img src="images/down-arrow.png" alt="Expandir"></div>
+                    <div class="gridDiscover"></div>
+                </div>
             </div>
-            <div class="articleGrid">
-                <div class="articleBox">Electrodomésticos<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
-            </div>
-            <div class="articleGrid">
-                <div class="articleBox">Moda<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
-            </div>
-            <div class="articleGrid">
-                <div class="articleBox">Entrenamiento<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
-            </div>
-            <div class="articleGrid">
-                <div class="articleBox">Jardín<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
-            </div>
-            <div class="articleGrid">
-                <div class="articleBox">Industria<img src="images/down-arrow.png" alt="Expandir"></div>
-                <div class="gridDiscover"></div>
-            </div>
+        </div>
+    </div>
+    <div class="shoping activate">
+        <div class="cartShop">
+            <img src="images/shopping-cart.png" alt="Comprar">
+            <p>Productos: <span>${totalAmount}</span></p>
+            <p>Total: <span>${total}</span></p>
+        </div>
+        <div class="gridShop">
+        </div>
+        <div class="buy">
+            <p>Cancelar</p>
+            <p>Comprar</p>
         </div>
     </div>
 

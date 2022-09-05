@@ -2,28 +2,37 @@ const open_Burger = document.getElementById("openBurger")
 const close_Burger = document.getElementById("closeBurger")
 const open_Favorite = document.getElementById("openFavorite")
 const open_Perfil = document.getElementById("openPerfil")
+const open_Cart = document.getElementById("openCart")
+const main = document.querySelector(".main")
+const shoping = document.querySelector(".shoping")
 const opcion = document.querySelectorAll(".btn-Foryou")
 const grid_Discover = document.querySelector("#Discover")
 const grid_Category = document.querySelector("#Category")
 const btn_Slide = document.querySelector(".btn-slide")
 const product_Promo = document.querySelectorAll(".productPromo")
 
-open_Burger.addEventListener("click",(e) => {
-    e.target.parentElement.children[1].style.transform = "translateX(0%)"
+open_Burger.addEventListener("click", function (){
+    this.parentElement.children[1].style.transform = "translateX(0%)"
 })
 
-close_Burger.addEventListener("click",(e) => {
-    e.target.parentElement.parentElement.style = "translateX(-100%)"
+close_Burger.addEventListener("click", function (){
+    this.parentElement.parentElement.style = "translateX(-100%)"
 })
 
-open_Favorite.addEventListener("click",(e) => {
-    e.target.classList.toggle("em-hearts")
-    e.target.classList.toggle("em-yellow_heart")
-    e.target.parentElement.children[1].classList.toggle("activate")
+open_Favorite.addEventListener("click", function (){
+    this.classList.toggle("em-hearts")
+    this.classList.toggle("em-yellow_heart")
+    this.parentElement.children[1].classList.toggle("activate")
 })
 
-open_Perfil.addEventListener("click", (e) => {
-    e.target.parentElement.lastElementChild.classList.toggle("activate")
+open_Perfil.addEventListener("click", function () {
+    this.parentElement.lastElementChild.classList.toggle("activate")
+})
+
+open_Cart.addEventListener("click", function(){
+    main.classList.toggle("activate")
+    this.parentElement.classList.toggle("activate")
+    shoping.classList.toggle("activate")
 })
 
 opcion[0].addEventListener("click",function(){
