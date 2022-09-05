@@ -21,6 +21,12 @@
     --z-promo: 500;
 }
 
+.fuente1{
+    font-family: ChackraPetch;
+}
+.fuente2{
+    font-family: Comfortaa;
+}
 
 *{
     margin: 0;
@@ -68,6 +74,9 @@ li{
 }
 
 
+.burgerNavbar > img{
+    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
+}
 .menuBurger{
     position: absolute;
     top: 0;
@@ -100,16 +109,13 @@ li{
     font-size: clamp(1rem, 2.5vw, 2rem); 
     
 }
-#closeBurger{
+.menuBurger #closeBurger{
     position: absolute;
     top: 0;
     right: 0;
     margin: 2em;
     height: 20px;
     width: 20px;
-}
-.burgerNavbar > img{
-    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
 }
 
 
@@ -148,6 +154,9 @@ li{
     width: 35px;
 }
 
+.perfil > img{
+    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
+}
 .menuPerfil{
     position: absolute;
     top: var(--navheight);
@@ -180,9 +189,6 @@ li{
 }
 .menuPerfil .carrito h3::before{
     contain: url();
-}
-.perfil > img{
-    filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(355deg) brightness(103%) contrast(103%);
 }
 
 
@@ -260,6 +266,28 @@ li{
     right: 0%;
     margin: 0.4em;
 }
+.gridDiscover .productGrid .infoProduct{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color-nav);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    /* backdrop-filter: blur(4px); */
+}
+.gridDiscover .productGrid .infoProduct:hover{
+    opacity: 1;
+}
+/* .gridDiscover .productGrid .infoProduct h2,p{
+    text-shadow: 0px 0px 4px white;
+}
+.gridDiscover .productGrid .infoProduct p{
+    font-size: 1.5em;
+} */
 
 
 .forYou .gridCategory{
