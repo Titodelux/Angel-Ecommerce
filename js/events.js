@@ -74,3 +74,4 @@ btn_Slide.addEventListener("click", function(e){
 })
 
 
+// grid_Category.addEventListener("click", categoryPrint)

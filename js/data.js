@@ -61,7 +61,7 @@ export const dataProduct = [
         urlImages: "./images/products/kelly-sikkema-xp-ND7NjWaA-unsplash.jpg",
         stock: 11,
         price: 10,
-        category: ["industrias","jardin"],
+        category: ["industria","jardin"],
     },
     {
         id: 9,
