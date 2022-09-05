@@ -4,6 +4,10 @@ import "./js/events.js"
 const Discover = document.getElementById("Discover")
 const grid_Category = document.getElementById("Category")
 const grid_Shop = document.querySelector(".gridShop")
+const buy = document.querySelector(".buy")
+const cart_Shop = document.querySelectorAll(".cartShop")
+// const btn_shop = document.querySelectorAll(".btn-btnsShop")
+
 
 const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -30,8 +34,6 @@ function print(){
     Discover.innerHTML = html
     callBtnBuy()
 }
-
-print()
 
 function categoryPrint(e){
     let html = "" 
@@ -81,9 +83,21 @@ function printToCart(e){
     let abuelo = e.target.parentElement.parentElement.parentElement
     let idProduct = Number(abuelo.id)
     let product = dataProduct.find((producto) => producto.id === idProduct)
-    if (objCart[idProduct]){objCart[idProduct].amount += 1}
-    else {objCart[idProduct] = product; objCart[idProduct].amount = 1}
 
+    if(product.stock >= 1){console.log("Si hay stock")
+        if (objCart[idProduct]){
+            objCart[idProduct].amount += 1
+            objCart[idProduct].stock -= 1
+        }
+        else {
+            objCart[idProduct] = product
+            objCart[idProduct].amount = 1
+            objCart[idProduct].stock -= 1
+        }
+    }
+    else {alert("No tenemos más stock!")}
+
+    
     let arrayCart = Object.values(objCart)
     arrayCart.forEach(({id, urlImages, name, price, amount, stock}) => {
         html += `
@@ -97,23 +111,44 @@ function printToCart(e){
                 <div class="btns-shop">
                     <p>Stock: <span>${stock}</span></p>
                     <div class="btn-btnsShop" id="${id}">
-                        <img src="images/add.png" alt="plus" id="btn-plus">
-                        <img src="images/minus.png" alt="minus" id="btn-minus">
-                        <img src="images/trash.png" alt="delete" id="btn-delete">
+                        <img src="images/add.png" alt="plus" class="btn-plus">
+                        <img src="images/minus.png" alt="minus" class="btn-minus">
+                        <img src="images/trash.png" alt="delete" class="btn-delete">
                     </div>
                 </div>
             </div>
         `
     })
     grid_Shop.innerHTML = html
+    printPrice(objCart)
 }
+
+function printPrice(objCart){
+    let sumaProduct = null
+    let sumaPrice = null
+    for (const idProduct in objCart) { 
+        sumaProduct += objCart[idProduct].amount
+        sumaPrice += objCart[idProduct].amount * objCart[idProduct].price
+    }
+    for (let i = 0; i < cart_Shop.length; i++) {
+        cart_Shop[i].children[1].lastElementChild.innerText = sumaProduct
+        cart_Shop[i].children[2].lastElementChild.innerText = sumaPrice
+    }
+}
+
 
 grid_Category.addEventListener("click", categoryPrint)
 
+buy.addEventListener("click",function(e){
+    console.log(e.target);
+    if(e.target.textContent === "Cancelar"){grid_Shop.innerHTML = ""; objCart = {}}
+    if(e.target.textContent === "Comprar"){grid_Shop.innerHTML = ""; objCart = {}; alert("Gracias por su compra")}
+    for (let i = 0; i < cart_Shop.length; i++) {
+        cart_Shop[i].children[1].lastElementChild.innerText = 0
+        cart_Shop[i].children[2].lastElementChild.innerText = 0
+    }
+})
 
-
-
-
-
+print()
 
 

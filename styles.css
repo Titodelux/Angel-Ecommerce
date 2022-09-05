@@ -180,7 +180,7 @@ li{
     display: flex;
     justify-content: space-around;
 }
-.menuPerfil .carrito{
+.menuPerfil .cartShop{
     /* position: relative; */
     padding: 1em;
     border: 1px var(--bg-nav) solid;
@@ -191,7 +191,7 @@ li{
     align-items: center;
     justify-items: center;
 }
-.menuPerfil .carrito > img{
+.menuPerfil .cartShop > img{
     width: 30px;
     height: 30px;
 }
