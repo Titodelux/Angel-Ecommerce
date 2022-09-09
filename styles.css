@@ -1,10 +1,10 @@
 @font-face {
     font-family: ChakraPetch;
-    src: url(../Fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+    src: url(Fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
 }
 @font-face {
     font-family: Comfortaa;
-    src: url(../Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+    src: url(Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
 
 :root{
