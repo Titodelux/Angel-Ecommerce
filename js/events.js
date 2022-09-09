@@ -2,9 +2,6 @@ const open_Burger = document.getElementById("openBurger")
 const close_Burger = document.getElementById("closeBurger")
 const open_Favorite = document.getElementById("openFavorite")
 const open_Perfil = document.getElementById("openPerfil")
-const open_Cart = document.getElementById("openCart")
-const main = document.querySelector(".main")
-const shoping = document.querySelector(".shoping")
 const opcion = document.querySelectorAll(".btn-Foryou")
 const grid_Discover = document.querySelector("#Discover")
 const grid_Category = document.querySelector("#Category")
@@ -29,11 +26,7 @@ open_Perfil.addEventListener("click", function () {
     this.parentElement.lastElementChild.classList.toggle("activate")
 })
 
-open_Cart.addEventListener("click", function(){
-    main.classList.toggle("activate")
-    this.parentElement.classList.toggle("activate")
-    shoping.classList.toggle("activate")
-})
+
 
 opcion[0].addEventListener("click",function(){
     opcion[0].classList.add("activate")
